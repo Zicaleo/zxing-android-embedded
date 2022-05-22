@@ -94,6 +94,7 @@ task sourceJar(type: Jar) {
 publishing {
     publications {
         maven(MavenPublication) {
+            artifact 'com.journeyapps.barcodescanner'
             artifactId project.artifactId
 
             artifact sourceJar
