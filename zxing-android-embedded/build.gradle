@@ -94,7 +94,6 @@ task sourceJar(type: Jar) {
 publishing {
     publications {
         maven(MavenPublication) {
-            artifact bundleReleaseAar
             artifactId project.artifactId
 
             artifact sourceJar
