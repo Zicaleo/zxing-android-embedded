@@ -105,10 +105,10 @@ public final class Intents {
          */
         public static final String BEEP_ENABLED = "BEEP_ENABLED";
 
-        /**
-         * Set to true to return a path to the barcode's image as it was captured. Defaults to false.
-         */
-        public static final String BARCODE_IMAGE_ENABLED = "BARCODE_IMAGE_ENABLED";
+        // /**
+        //  * Set to true to return a path to the barcode's image as it was captured. Defaults to false.
+        //  */
+        // public static final String BARCODE_IMAGE_ENABLED = "BARCODE_IMAGE_ENABLED";
 
         /**
          * Set the time to finish the scan screen.
