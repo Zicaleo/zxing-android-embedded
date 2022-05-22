@@ -59,7 +59,7 @@ public class CaptureManager {
     private DecoratedBarcodeView barcodeView;
     private int orientationLock = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
     private static final String SAVED_ORIENTATION_LOCK = "SAVED_ORIENTATION_LOCK";
-    private boolean returnBarcodeImagePath = false;
+    // private boolean returnBarcodeImagePath = false;
 
     private boolean showDialogIfMissingCameraPermission = true;
     private String missingCameraPermissionDialogMessage = "";
@@ -178,9 +178,9 @@ public class CaptureManager {
                 handler.postDelayed(this::returnResultTimeout, intent.getLongExtra(Intents.Scan.TIMEOUT, 0L));
             }
 
-            if (intent.getBooleanExtra(Intents.Scan.BARCODE_IMAGE_ENABLED, false)) {
-                returnBarcodeImagePath = true;
-            }
+            // if (intent.getBooleanExtra(Intents.Scan.BARCODE_IMAGE_ENABLED, false)) {
+            //     returnBarcodeImagePath = true;
+            // }
         }
     }
 
@@ -354,18 +354,18 @@ public class CaptureManager {
      */
     private String getBarcodeImagePath(BarcodeResult rawResult) {
         String barcodeImagePath = null;
-        if (returnBarcodeImagePath) {
-            Bitmap bmp = rawResult.getBitmap();
-            try {
-                File bitmapFile = File.createTempFile("barcodeimage", ".jpg", activity.getCacheDir());
-                FileOutputStream outputStream = new FileOutputStream(bitmapFile);
-                bmp.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
-                outputStream.close();
-                barcodeImagePath = bitmapFile.getAbsolutePath();
-            } catch (IOException e) {
-                Log.w(TAG, "Unable to create temporary file and store bitmap! " + e);
-            }
-        }
+        // if (returnBarcodeImagePath) {
+        //     Bitmap bmp = rawResult.getBitmap();
+        //     try {
+        //         File bitmapFile = File.createTempFile("barcodeimage", ".jpg", activity.getCacheDir());
+        //         FileOutputStream outputStream = new FileOutputStream(bitmapFile);
+        //         bmp.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
+        //         outputStream.close();
+        //         barcodeImagePath = bitmapFile.getAbsolutePath();
+        //     } catch (IOException e) {
+        //         Log.w(TAG, "Unable to create temporary file and store bitmap! " + e);
+        //     }
+        // }
         return barcodeImagePath;
     }
 

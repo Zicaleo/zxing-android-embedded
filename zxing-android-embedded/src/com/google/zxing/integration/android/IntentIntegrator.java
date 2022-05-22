@@ -222,16 +222,16 @@ public class IntentIntegrator {
         return this;
     }
 
-    /**
-     * Set to true to enable saving the barcode image and sending its path in the result Intent.
-     *
-     * @param enabled true to enable barcode image
-     * @return this
-     */
-    public IntentIntegrator setBarcodeImageEnabled(boolean enabled) {
-        addExtra(Intents.Scan.BARCODE_IMAGE_ENABLED, enabled);
-        return this;
-    }
+    // /**
+    //  * Set to true to enable saving the barcode image and sending its path in the result Intent.
+    //  *
+    //  * @param enabled true to enable barcode image
+    //  * @return this
+    //  */
+    // public IntentIntegrator setBarcodeImageEnabled(boolean enabled) {
+    //     addExtra(Intents.Scan.BARCODE_IMAGE_ENABLED, enabled);
+    //     return this;
+    // }
 
     /**
      * Set the desired barcode formats to scan.

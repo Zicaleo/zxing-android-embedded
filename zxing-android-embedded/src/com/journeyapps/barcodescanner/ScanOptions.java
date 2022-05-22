@@ -155,10 +155,10 @@ public class ScanOptions {
      * @param enabled true to enable barcode image
      * @return this
      */
-    public ScanOptions setBarcodeImageEnabled(boolean enabled) {
-        addExtra(Intents.Scan.BARCODE_IMAGE_ENABLED, enabled);
-        return this;
-    }
+    // public ScanOptions setBarcodeImageEnabled(boolean enabled) {
+    //     addExtra(Intents.Scan.BARCODE_IMAGE_ENABLED, enabled);
+    //     return this;
+    // }
 
     /**
      * Set the desired barcode formats to scan.
