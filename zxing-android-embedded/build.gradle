@@ -94,7 +94,6 @@ task sourceJar(type: Jar) {
 publishing {
     publications {
         maven(MavenPublication) {
-            artifact 'com.journeyapps.barcodescanner'
             artifactId project.artifactId
 
             artifact sourceJar
@@ -136,7 +135,7 @@ publishing {
 
                 project.configurations.api.allDependencies.each { dep ->
                     def node = deps.appendNode('dependency')
-                    node.appendNode('groupId', dep.group)
+                    node.appendNode('groupId', 'com.journeyapps.barcodescanner')
                     node.appendNode('artifactId', dep.name)
                     node.appendNode('version', dep.version)
                     node.appendNode('scope', 'api')
